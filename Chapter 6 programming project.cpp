@@ -2,19 +2,44 @@
 //
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
-}
+   double length, width, area, perimeter;
+   string cont = "y";
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+   while (cont == "y")
+   {
+	   while (length <= 0)
+	   {
+		   cout << "enter the length of the rectangle";
+		   cin >> length;
+		   if (length <= 0)
+		   {
+			   cout << "this value is physically impossible, enter a different one.";
+		   }
+	   }
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	   while (width <= 0)
+	   {
+		   cout << "enter the width of the rectangle";
+		   cin >> width;
+		   if (width <= 0)
+		   {
+			   cout << "this value is physically impossible, enter a different one.";
+		   }
+	   }
+
+	   perimeter = (length * 2) + (width * 2);
+	   area = length * width;
+
+	   cout << "the area of your rectangle is " << area << " and the perimeter is " << perimeter << endl;
+
+	   cout << "do you wish to calculate a different rectangle? (enter y if yes, anything else if no)";
+		   cin >> cont;
+   }
+ }
+
+
+
