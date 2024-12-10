@@ -6,11 +6,11 @@ using namespace std;
 
 int main()
 {
-   double length, width, area, perimeter;
    string cont = "y";
 
    while (cont == "y")
    {
+	   double length = 0, width = 0, area = 0, perimeter = 0;
 	   while (length <= 0)
 	   {
 		   cout << "enter the length of the rectangle";
@@ -39,6 +39,7 @@ int main()
 	   cout << "do you wish to calculate a different rectangle? (enter y if yes, anything else if no)";
 		   cin >> cont;
    }
+   return 0;
  }
 
 
