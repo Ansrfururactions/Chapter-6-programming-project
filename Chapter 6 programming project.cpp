@@ -1,21 +1,101 @@
-// Chapter 6 programming project.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 using namespace std;
 
 int main()
 {
+	int accidentCounterNorth=-1, accidentCounterSouth=-1, accidentCounterEast=-1, accidentCounterWest=-1, accidentCountercenter = -1, lowestaccidents = 0;
+	string city;
 
+	cout << "enter the name of the city" << endl;
+		cin >> city;
+
+		while (accidentCounterNorth < 0)
+		{
+			cout << "enter the amount of accidents in the northern part" << endl;
+			cin >> accidentCounterNorth;
+			if (accidentCounterNorth < 0)
+			{
+				cout << "how on earth can there be negative accidents? try again." << endl;
+			}
+
+	    }
+		lowestaccidents = accidentCounterNorth;
+
+		while (accidentCounterSouth < 0)
+		{
+			cout << "enter the amount of accidents in the southern part" << endl;
+			cin >> accidentCounterSouth;
+
+
+			if (accidentCounterSouth < 0)
+			{
+				cout << "how on earth can there be negative accidents? try again." << endl;
+			}
+
+		}
+
+		if (accidentCounterSouth < lowestaccidents)
+		{
+			lowestaccidents = accidentCounterSouth;
+		}
+
+		while (accidentCounterEast < 0)
+		{
+			cout << "enter the amount of accidents in the eastern part" << endl;
+			cin >> accidentCounterEast;
+
+			if (accidentCounterEast < 0)
+			{
+				cout << "how on earth can there be negative accidents? try again." << endl;
+			}
+		}
+
+		if (accidentCounterEast < lowestaccidents)
+		{
+			lowestaccidents = accidentCounterEast;
+		}
+
+		while (accidentCounterWest < 0)
+		{
+			cout << "enter the amount of accidents in the western part" << endl;
+			cin >> accidentCounterWest;
+			if (accidentCounterWest < 0)
+			{
+				cout << "how on earth can there be negative accidents? try again." << endl;
+			}
+
+		}
+		if (accidentCounterWest < lowestaccidents)
+		{
+			lowestaccidents = accidentCounterWest;
+		}
+		while (accidentCountercenter < 0)
+		{
+			cout << "enter the amount of accidents in the central part" << endl;
+			cin >> accidentCountercenter;
+			if (accidentCounterWest < 0)
+			{
+				cout << "how on earth can there be negative accidents? try again." << endl;
+			}
+
+		}
+		if (accidentCounterWest < lowestaccidents)
+		{
+			lowestaccidents = accidentCounterWest;
+		}
+
+		if (lowestaccidents = accidentCounterNorth)
+			cout << "the northern area of " << city << " has the least amout of accidents" << endl;
+		else if (lowestaccidents = accidentCounterSouth)
+			cout << "the southern area of " << city << " has the least amout of accidents" << endl;
+		else if (lowestaccidents = accidentCounterEast)
+			cout << "the eastern area of " << city << " has the least amout of accidents" << endl;
+		else if (lowestaccidents = accidentCounterWest)
+			cout << "the western area of " << city << " has the least amout of accidents" << endl;
+		else if (lowestaccidents = accidentCountercenter)
+			cout << "the central area of " << city << " has the least amout of accidents" << endl;
+		else
+			cout << "the safest area cannot be determined" << endl;
+			
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
