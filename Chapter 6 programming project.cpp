@@ -16,7 +16,7 @@ int main()
 			if (accidentCounterNorth < 0)
 			{
 				cout << "how on earth can there be negative accidents? try again." << endl;
-			}
+			} 
 
 	    }
 		lowestaccidents = accidentCounterNorth;
